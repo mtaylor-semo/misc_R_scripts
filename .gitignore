@@ -32,3 +32,8 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .Rproj.user
+
+# Other files that may appear in directory from time to time.
+*.gif
+*.jpg
+*.png
