@@ -12,7 +12,7 @@ library(vegan)
 library(ggplot2)
 
 data("dune", "dune.env")
-dist <- vegdist(dune, dist='bray')
+dist <- vegdist(dune, method='bray')
 
 dune.beta <- betadisper(dist, dune.env$Management)
 anova(dune.beta)
