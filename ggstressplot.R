@@ -34,7 +34,7 @@ ggStress <- function(object,
   tib <- tibble::tibble(object$diss, object$dist, object$dhat)
   colnames(tib) <- c("diss", "dist", "dhat")
   
-  stress <- fit$stress
+  stress <- object$stress
   R2nm <- format(1 - stress ^ 2, digits = 3)
   R2l <- format(cor(tib$dist, tib$dhat) ^ 2, digits = 3)
   
@@ -79,24 +79,24 @@ ggStress <- function(object,
       parse = TRUE
     )
   }
-  return(p)
+#  return(p)
 }
 
 ## Example
-library(ggplot2)
-library(vegan)
-
-data("dune")
-fit <- metaMDS(dune)
-
-# Change the blue dots to black
-p <- ggStress(fit, p.col = "black")
-
-# Can modify using additional ggplot functions.
-p + theme_classic()
-p
-
-## For comparison
-stressplot(fit)
+# library(ggplot2)
+# library(vegan)
+# 
+# data("dune")
+# fit <- metaMDS(dune)
+# 
+# # Change the blue dots to black
+# p <- ggStress(fit, p.col = "black")
+# 
+# # Can modify using additional ggplot functions.
+# p + theme_classic()
+# p
+# 
+# ## For comparison
+# stressplot(fit)
 
 
