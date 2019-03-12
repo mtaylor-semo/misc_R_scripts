@@ -12,5 +12,6 @@ Here is the revealed text
 ```
 
 <details><summary>Here is a working example</summary>
-Here is whatever code or text that is revealed or hidden.
+This would also work as part of an .Rmd file to generate the GitHub README.md file.
 </details>
+
